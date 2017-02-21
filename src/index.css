@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cabin', sans-serif;
+  background-color: green;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+footer {
+  font-family: 'Cabin', sans-serif;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+footer a {
+  color: white;
+}
+
+.main {
+  width: 60vw;
+  margin: 5vh auto;
+  background-color: white;
+  padding: 20px 50px;
+  color: black;
+}
+
+.main a {
+  color: black;
+}
+
+.btn {
+  font-family: 'Cabin', sans-serif;
+  color: #000000;
+  background: #ffffff;
+  border: none;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #e3e3e3;
+  text-decoration: none;
+}
+
+.fa {
+  padding-left: 5px;
+}

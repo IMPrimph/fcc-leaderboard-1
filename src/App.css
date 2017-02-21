@@ -1,0 +1,51 @@
+.leaderHeader {
+  font-size: smaller;
+}
+
+.leaderHeader div {
+  color: black !important;
+}
+
+.leaderRow {
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.leaderRow div {
+}
+
+.points {
+  display: inline-block;
+  width: 8vw;
+  color: green;
+  text-align: left;
+}
+
+.user {
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+}
+
+.avatar {
+  display: inline-block;
+  padding-right: 2vw;
+  vertical-align: middle;
+}
+
+.avatar img {
+  width: 4vh;
+  height: 4vh;
+  border: 1px solid black;
+}
+
+.avatar div {
+  display: inline-block;
+  width: 4vh;
+  height: 4vh;
+}
+
+.activeSort {
+  font-weight: bold;
+}
