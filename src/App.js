@@ -4,6 +4,9 @@ import './App.css';
 
 const API_URL = "https://fcctop100.herokuapp.com/api/fccusers/top/recent";
 
+// sorting functionality based on Road to Learn React course by Robin Wieruch
+// https://www.educative.io/collection/5740745361195008/5676830073815040?authorName=Robin%20Wieruch
+
 const SORTS = {
   NONE: list => list,
   RECENT: list => sortBy(list, 'recent').reverse(),
@@ -50,6 +53,9 @@ class App extends Component {
 }
 
 const Sort = ({whichSort, thisSort, isReverse, onSort, children}) => {
+  // Sort will determine if it is the current active sort method,
+  // and if so, in what direction the list is being sorted
+
   const whichClass = (whichSort === thisSort) ? 'activeSort' : ''
   const icon = isReverse ? 'fa-arrow-down' : 'fa-arrow-up'
 
@@ -78,6 +84,7 @@ class LeaderBoard extends Component {
   }
 
   onSort(whichSort) {
+    // only toggle reverseSort while the same sort method is being used
     const reverseSort = this.state.whichSort === whichSort ? !this.state.reverseSort : false
     this.setState({
       whichSort,
@@ -95,6 +102,8 @@ class LeaderBoard extends Component {
       reverseSort
     } = this.state;
 
+    // leaders (and in turn sortedLeaders, reverseLeaders) will be null when LeaderBoard first renders
+    // the Sort doesn't mind this, but reverse() and map() will
     const sortedLeaders = SORTS[whichSort](leaders)
     const reverseLeaders = (sortedLeaders && reverseSort) ? sortedLeaders.reverse() : sortedLeaders
 
