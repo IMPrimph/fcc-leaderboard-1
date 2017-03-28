@@ -10,10 +10,18 @@
   padding-left: 5px;
 }
 
+.leaderHeader:hover {
+  background-color: white !important;
+}
+
 .leaderRow {
   padding-bottom: 5px;
   padding-top: 5px;
   text-align: center;
+}
+
+.leaderRow:hover {
+  background-color: lightgray;
 }
 
 .points {
