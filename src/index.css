@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 4vh auto 0 auto;
   padding: 0;
   font-family: 'Cabin', sans-serif;
   background-color: green;
@@ -21,11 +21,23 @@ footer a {
   color: white;
 }
 
+@media (min-width: 600px) {
+  .main {
+    width: 60vw;
+    padding: 20px 50px;
+    margin: 5vh auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    width: 100%;
+    padding: 10px 2%;
+  }
+}
+
 .main {
-  width: 60vw;
-  margin: 5vh auto;
   background-color: white;
-  padding: 20px 50px;
   color: black;
 }
 
@@ -45,8 +57,4 @@ footer a {
 .btn:hover {
   background: #e3e3e3;
   text-decoration: none;
-}
-
-.fa {
-  padding-left: 5px;
 }

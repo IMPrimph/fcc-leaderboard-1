@@ -113,16 +113,6 @@ class LeaderBoard extends Component {
           <div className="avatar">
             <div>&nbsp;</div>
           </div>
-          <div className="points">
-            <Sort
-              whichSort={whichSort}
-              thisSort='RECENT'
-              isReverse={reverseSort}
-              onSort={this.onSort}
-            >
-              Recent
-            </Sort>
-          </div>
           <div className="user">
             <Sort
               whichSort={whichSort}
@@ -131,6 +121,16 @@ class LeaderBoard extends Component {
               onSort={this.onSort}
             >
               Username
+            </Sort>
+          </div>
+          <div className="points">
+            <Sort
+              whichSort={whichSort}
+              thisSort='RECENT'
+              isReverse={reverseSort}
+              onSort={this.onSort}
+            >
+              Recent
             </Sort>
           </div>
           <div className="points">
@@ -149,13 +149,13 @@ class LeaderBoard extends Component {
             <div className="avatar">
               <img src={leader.img} alt={`${leader.username}'s avatar`} />
             </div>
-            <div className="points">
-              {leader.recent}
-            </div>
             <div className="user">
               <a href={`https://www.freecodecamp.com/${leader.username}`} target="_blank">
                 {leader.username}
               </a>
+            </div>
+            <div className="points">
+              {leader.recent}
             </div>
             <div className="points">
               {leader.alltime}
